@@ -1,0 +1,64 @@
+extends global/master
+block content
+	section.Section
+		.container
+			.headerim
+				img(src='img/profile.jpg')
+				.profile
+					p Faruk İpek
+					p.description
+					| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam quis laudantium veritatis cupiditate iusto rerum corporis libero soluta aut aperiam.
+				.icon-box
+					svg.icon.icon-message
+						use(xlink:href='#icon-message')
+			.Section-menu.profile-menu
+				a(href='profile.html') Chronicle
+				a.active(href='profile-information.html') Information
+				a(href='#') Friends
+				a(href='profile-photos.html') Photos
+				a(href='#') More
+			.Section
+				.mainim
+					.information
+						.menu
+							p.active Overview
+							p Work & Education
+							p Details about Elon
+							p Life events
+					.box-list
+						.item
+							svg.icon.icon-birthday
+								use(xlink:href='#icon-birthday')
+							.details
+								.title 23 years
+								.description April 18, 1996
+						.item
+							svg.icon.icon-address
+								use(xlink:href='#icon-address')
+							.details
+								.title Lives in
+								.description Konya, Turkey
+						.item
+							svg.icon.icon-ceo
+								use(xlink:href='#icon-ceo')
+							.details
+								.title Freelancer
+								.description Front-End Developer
+						.item
+							svg.icon.icon-relationship
+								use(xlink:href='#icon-relationship')
+							.details
+								.title Relationships
+								.description Single
+						.item
+							svg.icon.icon-instagram
+								use(xlink:href='#icon-instagram')
+							.details
+								.title Instagram
+								.description farukipekcom
+						.item
+							svg.icon.icon-school
+								use(xlink:href='#icon-school')
+							.details
+								.title Computer Engineering
+								.description Konya Technical University

@@ -1,0 +1,86 @@
+.Section {
+  .container {
+    padding-left: $gutter20;
+    padding-right: $gutter20;
+    padding-top: $gutter20;
+    @include mq("tablet") {
+      padding-left: $gutter30;
+      padding-right: $gutter30;
+      padding-top: $gutter30;
+    }
+  }
+  .friend-list {
+    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-bottom: 70px;
+    @include mq("tablet") {
+      
+    padding-bottom: 110px;
+    }
+    .item {
+      display: flex;
+      align-items: center;
+      margin-top: $gutter20;
+      box-shadow: 0px 1px 5px rgba(210, 210, 210, 0.5);
+      border-radius: $border-radius;
+      background-color: $background-white;
+      margin-right: 0;
+      width: 100%;
+      @include mq("tablet") {
+        display: flex;
+        align-items: center;
+        margin-right: $gutter20;
+        flex: 1 0 32%;
+      }
+      img {
+        width: 90px;
+        height: 90px;
+        border-top-left-radius: $border-radius;
+        border-bottom-left-radius: $border-radius;
+        @include mq("tablet") {
+          width: 140px;
+          height: 140px;
+          border-top-left-radius: $border-radius;
+          border-bottom-left-radius: $border-radius;
+        }
+      }
+      .profile {
+        margin-left: $gutter20;
+        .name {
+          font-size: $font-size-large;
+          color: $color-black;
+          font-weight: 600;
+        }
+        .job {
+          font-size: $font-size-small;
+          color: $color-light-gray;
+          margin-top: $gutter10;
+          font-weight: 500;
+        }
+      }
+      .icon {
+        margin-left: auto;
+        margin-right: $gutter10;
+        width: 1.2em;
+        height: 1.2em;
+        color: $icon-gray;
+      }
+    }
+  }
+}
+
+.owl-item {
+  padding-right: 0px;
+  @include mq("tablet") {
+    padding-right: 20px;
+  }
+}
+
+.owl-stage {
+  display: flex;
+  align-items: center;
+  width: max-content !important;
+}
+

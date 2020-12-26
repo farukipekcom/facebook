@@ -1,0 +1,266 @@
+extends global/master
+block content
+	section.Section
+		.container
+			.headerim
+				img(src='img/profile.jpg')
+				.profile
+					p Faruk İpek
+					p.description
+						| Merhaba ✋ Ben adnan,
+						| Freelance front-end developer olarak Konya'da yaşıyorum.
+						| 2013 yılında ilk adımlarımı attığım bu sektörde, şu an freelance front-end developer olarak çalışıyorum.
+				.icon-box
+					svg.icon.icon-message
+						use(xlink:href='#icon-message')
+			.Section-menu.profile-menu
+				a.active(href='profile.html') Chronicle
+				a(href='profile-information.html') Information
+				a(href='#') Friends
+				a(href='profile-photos.html') Photos
+				a(href='#') More
+			.gallery
+				img(src='img/profile-gallery-1.jpg')
+				img(src='img/profile-gallery-2.jpg')
+				img(src='img/profile-gallery-3.jpg')
+				img(src='img/profile-gallery-4.jpg')
+				img(src='img/profile-gallery-5.jpg')
+				img(src='img/profile-gallery-6.jpg')
+			.Section-part
+				.mainim
+					.create-post
+						img(src='img/profile.jpg' alt='')
+						input(type='text' placeholder="What's on your mind?")
+						svg.icon.icon-gallery
+							use(xlink:href='#icon-gallery')
+						svg.icon.icon-friends
+							use(xlink:href='#icon-friends')
+						svg.icon.icon-emoji
+							use(xlink:href='#icon-emoji')
+						.seperator
+						svg.icon.icon-instagram
+							use(xlink:href='#icon-instagram')
+						.seperator
+						svg.icon.icon-camera
+							use(xlink:href='#icon-camera')
+					.post
+						.post-profile-area
+							img(src='img/profile.jpg' alt='')
+							.title
+								h3 Faruk İpek
+								p 8:15 PM, yesterday
+							svg.icon.icon-right
+								use(xlink:href='#icon-3doth')
+						.post-text
+							p
+								| Our Falcon’ 1st step successfully returned from its’ 9th mission.
+								br
+								|                   Gonna try it out next week one more time. Why not?
+							.photo
+								img.item(src='img/post-1.jpg')
+								img.item(src='img/post-2.jpg')
+								img.item(src='img/post-3.jpg')
+								img.item(src='img/post-4.jpg')
+								img.item(src='img/post-5.jpg')
+								img.item(src='img/post-6.jpg')
+						.post-comments
+							.item
+								svg.icon.icon-like
+									use(xlink:href='#icon-like')
+								p.count 25K
+							.item
+								svg.icon.icon-comments
+									use(xlink:href='#icon-comments')
+								p.count 2K
+							.item
+								svg.icon.icon-share
+									use(xlink:href='#icon-share')
+								p.count 14K
+					.post
+						.post-profile-area
+							img(src='img/profile-2.png' alt='')
+							.title
+								h3 Christian Phillips
+								p 11:20 AM, yesterday
+							svg.icon.icon-right
+								use(xlink:href='#icon-3doth')
+						.post-text
+							p
+								| Maldives’s such an amazing place. It’s my first time here, and I have to tell you, that it’s the most
+								| beautiful nature I’ve ever seen.
+								| You are welcome to check my small photoset from our 1st day here.
+							.photo
+								img.item(src='img/post-7.jpg')
+								img.item(src='img/post-8.jpg')
+								img.item(src='img/post-9.jpg')
+								img.item(src='img/post-10.jpg')
+								img.item(src='img/post-11.jpg')
+								img.item(src='img/post-12.jpg')
+						.post-comments
+							.item
+								svg.icon.icon-like
+									use(xlink:href='#icon-like')
+								p.count 342
+							.item
+								svg.icon.icon-comments
+									use(xlink:href='#icon-comments')
+								p.count 14
+							.item
+								svg.icon.icon-share
+									use(xlink:href='#icon-share')
+								p.count 6
+					.post
+						.post-profile-area
+							img(src='img/profile-6.png' alt='')
+							.title
+								h3 Jason Dutch
+								p 4:22 PM, yesterday
+							svg.icon.icon-right
+								use(xlink:href='#icon-3doth')
+						.post-text
+							p Hello there. It’s my second DailyUI shot.
+							p It presents some billing process via mobile app.
+							p Would be so pleased for your feedback.
+							.photo
+								img.item(src='img/post-13.jpg')
+								img.item(src='img/post-14.jpg')
+								img.item(src='img/post-15.jpg')
+								img.item(src='img/post-16.jpg')
+								img.item(src='img/post-17.jpg')
+								img.item(src='img/post-18.jpg')
+						.post-comments
+							.item
+								svg.icon.icon-like
+									use(xlink:href='#icon-like')
+								p.count 17
+							.item
+								svg.icon.icon-comments
+									use(xlink:href='#icon-comments')
+								p.count 102
+							.item
+								svg.icon.icon-share
+									use(xlink:href='#icon-share')
+								p.count 17
+				.sidebar
+					.statics
+						p Summary
+						.list
+							.item
+								p 739k
+								p likes
+							.item
+								p 254k
+								p followers
+							.item
+								p 193
+								p friends
+							.item
+								p 205
+								p posts
+					.about
+						p About
+						.profile 23 years, Single
+						.social
+							.social-media
+								svg.icon.icon-instagram
+									use(xlink:href='#icon-instagram')
+								|                   farukipekcom
+							.social-media
+								svg.icon.icon-twitter
+									use(xlink:href='#icon-twitter')
+								|                   farukipekcom
+						.friends
+							p Friends
+							.list
+								.item
+									img(src='img/profile-4.png')
+									.title
+										p.name Chris Piccolo
+										p.job Uber
+									.icons
+										svg.icon.icon-message
+											use(xlink:href='#icon-message')
+										svg.icon.icon-3doth
+											use(xlink:href='#icon-3doth')
+								.item
+									img(src='img/profile-5.png')
+									.title
+										p.name Carrie Kim
+										p.job Twitter
+									.icons
+										svg.icon.icon-message
+											use(xlink:href='#icon-message')
+										svg.icon.icon-3doth
+											use(xlink:href='#icon-3doth')
+								.item
+									img(src='img/profile-6.png')
+									.title
+										p.name Gussie Jones
+										p.job Facebook
+									.icons
+										svg.icon.icon-message
+											use(xlink:href='#icon-message')
+										svg.icon.icon-3doth
+											use(xlink:href='#icon-3doth')
+								.item
+									img(src='img/profile-7.png')
+									.title
+										p.name Nathaniel Gibbs
+										p.job Google
+									.icons
+										svg.icon.icon-message
+											use(xlink:href='#icon-message')
+										svg.icon.icon-3doth
+											use(xlink:href='#icon-3doth')
+								.item
+									img(src='img/profile-8.png')
+									.title
+										p.name Melvin Castro
+										p.job Tesla
+									.icons
+										svg.icon.icon-message
+											use(xlink:href='#icon-message')
+										svg.icon.icon-3doth
+											use(xlink:href='#icon-3doth')
+							p People you may know
+							.list
+								.item
+									img(src='img/profile-13.png')
+									.title
+										p.name Joe Campbell
+										p.job Grubhub
+									.icons
+										svg.icon.icon-3doth
+											use(xlink:href='#icon-3doth')
+								.item
+									img(src='img/profile-12.png')
+									.title
+										p.name Lois Ramirez
+										p.job Lyft
+									.icons
+										svg.icon.icon-3doth
+											use(xlink:href='#icon-3doth')
+								.item
+									img(src='img/profile-11.png')
+									.title
+										p.name Jeffery Bishop
+										p.job IBM
+									.icons
+										svg.icon.icon-3doth
+											use(xlink:href='#icon-3doth')
+								.item
+									img(src='img/profile-10.png')
+									.title
+										p.name Jack Dawson
+										p.job DJI
+									.icons
+										svg.icon.icon-3doth
+											use(xlink:href='#icon-3doth')
+								.item
+									img(src='img/profile-9.png')
+									.title
+										p.name Jeremiah Green
+										p.job Apple
+									.icons
+										svg.icon.icon-3doth
+											use(xlink:href='#icon-3doth')

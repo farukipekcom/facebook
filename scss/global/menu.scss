@@ -1,0 +1,54 @@
+// .box {
+//   height: 80px;
+//   .container {
+//     display: flex;
+//     align-items: center;
+//     height: 100%;
+//   }
+//   img {
+//     width: 140px;
+//   }
+//   &-switch {
+//     position: relative;
+//     left: 10px;
+//     margin-left: auto;
+//     @include mq("tablet") {
+//       display: none;
+//     }
+//   }
+//   &-menu {
+//     background-color: #f3f3f3;
+//     pointer-events: none;
+//     opacity: 0;
+//     display: flex;
+//     position: fixed;
+//     left: 0px;
+//     right: 0px;
+//     top: 68px;
+//     flex-direction: column;
+//     padding-left: 20px;
+//     a {
+//       margin-top: 10px;
+//       margin-bottom: 10px;
+//     }
+//     .box.menu-show & {
+//       opacity: 1;
+//       transform: translateX(0);
+//       pointer-events: auto;
+//     }
+//     @include mq("tablet") {
+//       pointer-events: auto;
+//       transform: translateY(0);
+//       transition: 0s;
+//       opacity: 1;
+//       margin-left: auto;
+//       flex-direction: row;
+//       position: static;
+//       box-shadow: none;
+//       background-color: transparent;
+//       padding-left: 0;
+//       padding-right: 0;
+//       padding-bottom: 0;
+//     }
+//   }
+// }

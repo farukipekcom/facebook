@@ -1,0 +1,184 @@
+.Section {
+  .container {
+  }
+  .headerim {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include mq("tablet") {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    img {
+      min-width: 100px;
+      display: block;
+      height: 100px;
+      border-radius: 50%;
+      @include mq("tablet") {
+        min-width: 170px;
+        height: 170px;
+      }
+    }
+    .profile {
+      margin-top: $gutter20;
+      @include mq("tablet") {
+        margin-left: $gutter30;
+      }
+      p {
+        font-size: 30px;
+        color: $color-black;
+        font-weight: 600;
+        text-align: center;
+        @include mq("tablet") {
+          font-size: 30px;
+          color: $color-black;
+          font-weight: 600;
+          text-align: left;
+        }
+      }
+      .description {
+        margin-top: $gutter10;
+        font-size: $font-size;
+        line-height: $line-height;
+        font-weight: 400;
+        color: $color-black;
+      }
+    }
+    .icon-box {
+      margin-left: auto;
+      background-color: $color-blue;
+      margin-left: $gutter50;
+      margin-right: $gutter50;
+      padding: $gutter20;
+      border-radius: 50%;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0px 13px 30px rgba(3, 65, 177, 0.4);
+      @include mq("tablet") {
+        display: flex;
+      }
+      .icon {
+        width: 2em;
+        height: 2em;
+        color: white;
+      }
+    }
+  }
+  .profile-menu {
+    margin-top: $gutter30;
+  }
+  .gallery {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: $gutter20;
+    overflow: hidden;
+    display: block;
+    @include mq("tablet") {
+      flex-wrap: wrap;
+    }
+    @include mq("desktop") {
+      flex-wrap: nowrap;
+    }
+    a img {
+      width: calc(33.3% - 10px);
+      height: 140px;
+      object-fit: cover;
+      object-position: 50% 50%;
+      border-radius: $border-radius;
+      margin-top: $gutter10;
+      @include mq("tablet") {
+        width: calc(33% - 10px);
+        height: 240px;
+      }
+      @include mq("desktop") {
+        width: calc(16.67% - 15px);
+        height: 240px;
+      }
+    }
+    a:not(:first-child) {
+      img {
+        margin-left: 10px;
+      }
+    }
+    a:nth-child(7) {
+      img {
+        margin-left: 0px;
+        @include mq("tablet") {
+          margin-left: 0px;
+        }
+        @include mq("desktop") {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+  .sidebar {
+    display: none;
+    min-width: 320px;
+    @include mq("tablet") {
+      display: none;
+    }
+    @include mq("desktop") {
+      display: block;
+    }
+    .statics {
+      p {
+        color: $color-black;
+        font-size: $font-size-large;
+        font-weight: 600;
+      }
+      .list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 80px;
+        .item {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          p {
+            font-size: $font-size;
+            color: #5085e8;
+            font-weight: 600;
+            margin-top: 5px;
+          }
+          p + p {
+            font-weight: 400;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+
+    .about {
+      margin-top: $gutter20;
+      p {
+        color: $color-black;
+        font-size: $font-size-large;
+        font-weight: 600;
+      }
+      .profile {
+        margin-top: $gutter20;
+      }
+      .social {
+        display: flex;
+        flex-direction: column;
+        margin-top: $gutter10;
+        .social-media {
+          display: flex;
+          align-items: center;
+          margin-top: $gutter10;
+          .icon {
+            width: 1.5em;
+            height: 1.5em;
+            color: $icon-gray;
+            margin-right: $gutter10;
+          }
+        }
+      }
+    }
+  }
+}

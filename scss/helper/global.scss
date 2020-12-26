@@ -1,0 +1,22 @@
+body {
+  font-family: "Montserrat";
+}
+.container {
+  max-width: $max-width;
+  padding-left: $gutter;
+  padding-right: $gutter;
+}
+
+.icon {
+  display: inline-block;
+  stroke-width: 0;
+  width: 1em;
+  height: 1em;
+  stroke: currentColor;
+}
+.Main {
+  display: block;
+  @include mq("large") {
+    display: flex;
+  }
+}

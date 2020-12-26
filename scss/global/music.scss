@@ -1,0 +1,457 @@
+.Section-music {
+  display: block;
+  .container {
+    padding: 0px;
+    .music {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 50px;
+      @include mq("tablet") {
+      flex-direction: row;
+      padding-bottom: 80px;
+      }
+      .left {
+        background-color: $background-white;
+        flex: 5;
+        order: 2;
+        @include mq("tablet") {
+          order: 1;
+        }
+        .menu {
+          border-bottom: 1px solid $border-color;
+          height: 70px;
+          padding: $gutter20;
+          display: flex;
+          align-items: center;
+          @include mq("tablet") {
+            padding: $gutter30;
+          }
+          .active {
+
+            font-weight: 700;
+            color: $color-black;
+          }
+          a {
+            font-weight: 500;
+            font-size: $font-size;
+            color: $color-light-gray;
+          }
+          a + a {
+            margin-left: $gutter20;
+          }
+          .icons {
+            margin-left: auto;
+            .icon {
+              color: $icon-gray;
+              width: 1.2em;
+              height: 1.2em;
+              margin-left: $gutter20;
+            }
+          }
+        }
+        .banner {
+          padding: $gutter20;
+          @include mq("tablet") {
+            padding: $gutter30;
+            flex-wrap: nowrap;
+          }
+          p {
+            font-size: 24px;
+            font-weight: 600;
+            color: $color-black;
+          }
+          .list {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            @include mq("tablet") {
+              flex-wrap: wrap;
+            }
+            @include mq("desktop") {
+              flex-wrap: nowrap;
+            }
+            .item {
+              width: calc(50% - 5px);
+              margin-top: 10px;
+              position: relative;
+              @include mq("tablet") {
+                width: calc(50% - 10px);
+                box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+              }
+              @include mq("desktop") {
+                width: 33%;
+                box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+              }
+              .title {
+                position: absolute;
+                bottom: 25%;
+                left: 20px;
+                color: $color-black;
+                font-weight: 600;
+                font-size: $font-size-large;
+                @include mq("tablet") {
+                  font-size: 26px;
+                }
+              }
+              .details {
+                position: absolute;
+                bottom: 12%;
+                height: 20px;
+                left: 20px;
+                color: $color-black;
+                font-weight: 400;
+                font-size: $font-size-small;
+                @include mq("tablet") {
+                  font-size: $font-size;
+                  bottom: 15%;
+                }
+              }
+              img {
+                width: 100%;
+                @include mq("tablet") {
+                  height: 280px;
+                  width: 100%;object-fit: cover;
+                }
+              }
+            }
+          }
+          .item:nth-child(2n) {
+            margin-left: 10px;
+          }
+
+          .item + .item {
+            margin-left: 0;
+            @include mq("tablet") {
+              margin-left: 0;
+            }
+            @include mq("desktop") {
+              margin-left: $gutter20;
+            }
+          }
+          .item:nth-child(3) {
+            width: 100%;
+            @include mq("tablet") {
+              width: 100%;
+            }
+            @include mq("desktop") {
+              width: 33%;
+            }
+            .title {
+              bottom: 22%;
+              @include mq("tablet") {
+                bottom: 25%;
+              }
+            }
+          }
+        }
+        .spotlights {
+          padding: $gutter20;
+          @include mq("tablet") {
+            padding: $gutter30;
+          }
+          p {
+            font-size: 24px;
+            font-weight: 600;
+            color: $color-black;
+          }
+          .list {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            .item {
+              width: 100%;
+              margin-top: 10px;
+              position: relative;
+              @include mq("tablet") {
+                width: calc(50% - 10px);
+                box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+              }
+
+              .title {
+                position: absolute;
+                bottom: 20%;
+                left: 20px;
+                color: $color-black;
+                font-weight: 600;
+                font-size: $font-size-large;
+                @include mq("tablet") {
+                  bottom: 25%;
+                  font-size: 26px;
+                }
+              }
+              .details {
+                position: absolute;
+                bottom: 15%;
+                left: 20px;
+                color: $color-black;
+                font-weight: 400;
+                font-size: $font-size-small;
+                @include mq("tablet") {
+                  font-size: $font-size;
+                }
+              }
+              img {
+                width: 100%;
+                @include mq("tablet") {
+                  height: 280px;
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+
+        .week-chart-list {
+          padding: $gutter20;
+          @include mq("tablet") {
+            padding: $gutter30;
+          }
+          width: 100%;
+          p {
+            font-size: 24px;
+            font-weight: 600;
+            color: $color-black;
+          }
+          .item {
+            display: flex;
+            align-items: center;
+            padding-top: $gutter10;
+            padding-bottom: 0;
+            img {
+              width: 50px;
+              height: 50px;
+              @include mq("tablet") {
+                width: 60px;
+                height: 60px;
+              }
+            }
+
+            .profile {
+              display: flex;
+              flex-direction: column;
+              margin-left: $gutter10;
+              @include mq("tablet") {
+                margin-left: $gutter20;
+              }
+              .track {
+                font-size: $font-size;
+                line-height: $line-height;
+                font-weight: 500;
+                color: $color-black;
+                @include mq("tablet") {
+                  font-size: $font-size-large;
+                }
+              }
+              .artist-name {
+                font-size: $font-size-small;
+                font-weight: 400;
+                color: $color-gray;
+                margin-top: 0px;
+                @include mq("tablet") {
+                  margin-top: 5px;
+                }
+              }
+            }
+            .music-right {
+              display: flex;
+              align-items: center;
+              margin-left: auto;
+              p {
+                margin-right: $gutter20;
+                color: $color-black;
+                font-size: $font-size-small;
+                font-weight: 400;
+                @include mq("tablet") {
+                  font-size: $font-size;
+                }
+              }
+              .icon {
+                width: 1em;
+                height: 1em;
+                color: $icon-blue;
+                @include mq("tablet") {
+                  width: 1.3em;
+                  height: 1.3em;
+                }
+              }
+              .icon + .icon {
+                margin-left: $gutter10;
+                @include mq("tablet") {
+                  margin-left: $gutter20;
+                }
+              }
+            }
+          }
+        }
+        .banner-bottom {
+          .list {
+            .item {
+              .title {
+                position: absolute;
+                bottom: 25%;
+                left: 20px;
+                color: $color-white;
+                font-weight: 600;
+                font-size: $font-size-large;
+                @include mq("tablet") {
+                  font-size: 26px;
+                }
+              }
+              .details {
+                position: absolute;
+                bottom: 15%;
+                left: 20px;
+                color: $color-white;
+                font-weight: 400;
+                font-size: $font-size-small;
+                @include mq("tablet") {
+                  font-size: $font-size;
+                }
+              }
+            }
+            
+          .item:nth-child(2n) {
+            margin-left: 10px;
+          }
+
+          .item + .item {
+            margin-left: 0;
+            @include mq("tablet") {
+              margin-left: 0;
+            }
+            @include mq("desktop") {
+              margin-left: $gutter20;
+            }
+          }
+          .item:nth-child(3) {
+            width: 100%;
+            @include mq("tablet") {
+              width: 100%;
+            }
+            @include mq("desktop") {
+              width: 33%;
+            }
+            .title {
+              bottom: 22%;
+              @include mq("tablet") {
+                bottom: 25%;
+              }
+            }
+          }
+          }
+          
+        }
+      }
+      .right {
+        flex: 2;
+        order: 1;
+        border-left: 1px solid $border-color;
+        background-color: white;
+        overflow-y: hidden;
+        max-height: 420px;
+        @include mq("tablet") {
+          flex: 2 200px;
+          order: 2;
+          overflow-y: visible;
+          max-height: 100%;
+        }
+
+        .playing-now {
+          height: 70px;
+          border-bottom: 1px solid $border-color;
+          display: flex;
+          align-items: center;
+          padding: $gutter20;
+          p {
+            font-size: $font-size;
+            font-weight: 500;
+          }
+          .icon {
+            margin-left: auto;
+          }
+        }
+        .list {
+          width: 100%;
+          .item {
+            display: flex;
+            align-items: center;
+            padding-left: $gutter20;
+            padding-right: $gutter20;
+            padding-bottom: $gutter10;
+            padding-top: $gutter10;
+            @include mq("tablet") {
+              padding-top: $gutter20;
+              padding-bottom: 0;
+            }
+            img {
+              width: 50px;
+              height: 50px;
+              @include mq("tablet") {
+                width: 60px;
+                height: 60px;
+              }
+            }
+            .profile {
+              display: flex;
+              flex-direction: column;
+              margin-left: $gutter10;
+              @include mq("tablet") {
+                margin-left: $gutter20;
+              }
+              .track {
+                font-size: $font-size;
+                line-height: $line-height;
+                font-weight: 500;
+                color: $color-black;
+                @include mq("tablet") {
+                  font-size: $font-size-large;
+                }
+              }
+              .artist-name {
+                font-size: $font-size-small;
+                font-weight: 400;
+                color: $color-gray;
+                margin-top: 0px;
+                @include mq("tablet") {
+                  margin-top: 5px;
+                }
+              }
+            }
+            .music-right {
+              display: flex;
+              align-items: center;
+              margin-left: auto;
+              p {
+                margin-right: $gutter20;
+                color: $color-black;
+                font-size: $font-size-small;
+                @include mq("tablet") {
+                  font-size: $font-size;
+                }
+              }
+              .icon {
+                width: 1em;
+                height: 1em;
+                color: $icon-blue;
+                @include mq("tablet") {
+                  width: 1.3em;
+                  height: 1.3em;
+                }
+              }
+              .icon + .icon {
+                margin-left: $gutter10;
+                @include mq("tablet") {
+                  margin-left: $gutter20;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

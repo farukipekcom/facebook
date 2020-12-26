@@ -1,0 +1,112 @@
+extends global/master
+block content
+	section.Section.Section-messages
+		.container
+			.message
+				.left
+					#hidden-message-details.hidden-post Please select a chat to start messaging
+					#show-message-details.show-post
+						.message-text
+							.profile
+								img(src='img/profile-13.png')
+								p Jayesh Goldstein
+								.icons
+									svg.icon
+										use(xlink:href='#icon-search')
+									svg.icon
+										use(xlink:href='#icon-3doth')
+							.message-left
+								| Hey! What you thing bout our Starship presentation?
+								p.time 22:01
+							.message-right
+								| Hi, Jayesh. It was very much in your style, if you understand me :)
+								p.time 22:09
+							.message-left
+								| Yes. Thank you!
+								p.time 23:47
+							.message-right
+								| Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil, ea.
+								p.time 22:09
+							.message-left
+								| Lorem ipsum dolor sit amet. Tenetur facere veritatis omnis, cum modi dolorem ea doloribus saepe
+								| impedit eligendi?
+								p.time 23:47
+						.create-message
+							svg.icon
+								use(xlink:href='#icon-attach')
+							input(type='text' placeholder='Write a message to Jayesh')
+							.icons
+								svg.icon
+									use(xlink:href='#icon-gallery')
+								svg.icon
+									use(xlink:href='#icon-emoji')
+								svg.icon
+									use(xlink:href='#icon-camera')
+								svg.icon
+									use(xlink:href='#icon-mic')
+				.right
+					.search
+						svg.icon
+							use(xlink:href='#icon-search')
+						input(type='text' placeholder='Search in all messages')
+						svg.icon.icon-plus
+							use(xlink:href='#icon-plus')
+					.status
+						p All
+						p Unread
+						p Important
+					.list
+						.item(onclick='myFunction3()')
+							img(src='img/profile-13.png')
+							.profile
+								p.name Jayesh Goldstein
+								p.message-text
+									| Sergey, are you here? Our partners
+									| from Pentagon are waiting for your…
+							p.date 17:27
+						.item
+							img(src='img/profile-12.png')
+							.profile
+								p.name Grace Robinson
+								p.message-text
+									| Hey! What you think bout our Starship
+									| presentation?
+							p.date 18:35
+						.item
+							img(src='img/profile-11.png')
+							.profile
+								p.name Don Rodriquez
+								p.message-text You: Nice shot)
+							p.date 23:58
+						.item
+							img(src='img/profile-10.png')
+							.profile
+								p.name Della Marsh
+								p.message-text Thank you a lot
+							p.date Yesterday
+						.item
+							img(src='img/profile-9.png')
+							.profile
+								p.name Callie Medina
+								p.message-text You: Ok, got it.
+							p.date Yesterday
+						.item
+							img(src='img/profile-8.png')
+							.profile
+								p.name Sally Gilbert
+								p.message-text Please don’t fire me :(
+							p.date Nov, 20
+						.item
+							img(src='img/profile-7.png')
+							.profile
+								p.name Douglas McGee
+								p.message-text Please don’t fire me :(
+							p.date Nov, 20
+						.item
+							img(src='img/profile-6.png')
+							.profile
+								p.name Beulah Hunter
+								p.message-text
+									| Our mobile platform needs technical
+									| improvement.
+							p.date Nov, 20

@@ -1,0 +1,78 @@
+.Section {
+  .container {
+  }
+  .page {
+    width: 100%;
+    padding-bottom: 80px;
+  }
+  .information {
+    margin-top: 0;
+    @include mq("tablet") {
+      margin-top: $gutter20;
+    }
+    .menu {
+      display: none;
+      align-items: center;
+      @include mq("tablet") {
+        display: flex;
+      }
+
+      p {
+        color: $color-blue;
+        font-size: $font-size-small;
+        width: max-content;
+      }
+      p + p {
+        margin-left: $gutter20;
+      }
+      .active {
+        padding: 7px 15px 7px 15px;
+        background-color: $background-blue;
+        border-radius: 20px;
+        color: White;
+      }
+    }
+  }
+  .box-list {
+    display: flex;
+    flex-direction: column;
+    @include mq("tablet") {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .item {
+      height: 80px;
+      box-shadow: 0px 3px 1px rgba(210, 210, 210, 0.5);
+      border-radius: $border-radius;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      margin-top: $gutter20;
+      margin-right: 0;
+      padding: $gutter20;
+      flex: 1 0 31%;
+      @include mq("tablet") {
+        padding: $gutter30;
+        margin-right: $gutter20;
+      }
+      .icon {
+        width: 2.5em;
+        height: 2.5em;
+        color: $icon-blue;
+      }
+      .details {
+        margin-left: $gutter20;
+        .title {
+          font-size: $font-size;
+          color: $color-black;
+          line-height: $line-height;
+        }
+        .description {
+          font-size: $font-size-small;
+          font-weight: 500;
+          color: $color-blue;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.profile-gallery {
+  height: auto;
+  padding-bottom: 80px;
+  @include mq("tablet") {
+    padding-bottom: 110px;
+  }
+  .item {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: $gutter20;
+    display: inline-block;
+    a img {
+      width: calc(100%);
+      height: 350px;
+      object-fit: cover;
+      object-position: 50% 50%;
+      margin-right: 0;
+      margin-bottom: $gutter10;
+      border-radius: $border-radius;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      @include mq("tablet") {
+        width: calc(33% - 15px);
+        height: 250px;
+        margin-right: $gutter10;
+      }
+      @include mq("desktop") {
+        width: calc(25% - 15px);
+        height: 250px;
+      }
+      @include mq("large") {
+        width: calc(25% - 15px);
+        height: 350px;
+      }
+    }
+  }
+}

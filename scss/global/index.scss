@@ -1,0 +1,460 @@
+.Section {
+  flex: 6;
+  display: flex;
+  font-family: $font-family2;
+  background-color: $background-gray1;
+  .container {
+    padding-top: $gutter30;
+    padding-left: $gutter30;
+    padding-right: $gutter30;
+    @include mq("tablet") {
+      padding-top: $gutter50;
+      padding-left: $gutter30;
+      padding-right: $gutter30;
+    }
+  }
+  &-menu {
+    display: flex;
+    flex-direction: row;
+    @include mq("tablet") {
+      display: flex;
+      padding-bottom: 20px;
+      border-bottom: 2px solid $border-color;
+    }
+    a {
+      color: $color-light-gray;
+      font-weight: 500;
+    }
+    a + a {
+      @include mq("tablet") {
+        margin-left: $gutter40;
+      }
+    }
+    .active {
+      color: $color-black;
+      font-weight: 700;
+    }
+  }
+  .owl-item:nth-last-child(1) a {
+    margin-right: 40px;
+  }
+  .owl-item + .owl-item {
+    margin-left: 0px;
+  }
+
+  &-part {
+    display: flex;
+    .mainim {
+      flex: 5;
+      padding-bottom: 80px;
+      @include mq("tablet") {
+        padding-bottom: 110px;
+      }
+      .create-post {
+        display: flex;
+        align-items: center;
+        height: 60px;
+        margin-top: $gutter20;
+        padding-right: $gutter20;
+        padding-left: $gutter20;
+        border-radius: $border-radius;
+        background-color: $background-white;
+        border: 1px solid $border-color;
+        box-shadow: 0px 3px 1px rgba(200, 200, 200, 0.5);
+        @include mq("tablet") {
+          margin-top: $gutter30;
+          padding-left: $gutter30;
+          padding-right: $gutter30;
+          height: 80px;
+        }
+
+        img {
+          display: none;
+          border-radius: 50%;
+          width: 50px;
+          height: 50px;
+          @include mq("tablet") {
+            display: block;
+          }
+        }
+        input {
+          width: 60%;
+          border: 0px;
+          font-size: $font-size;
+          color: $color-black;
+          margin-left: 0;
+          @include mq("tablet") {
+            margin-left: $gutter20;
+            width: 50%;
+          }
+          &:focus {
+            outline: 0;
+          }
+        }
+        .icon {
+          margin-left: auto;
+          min-width: 1.2em;
+          min-height: 1.2em;
+          color: $icon-gray;
+        }
+        .icon-instagram,
+        .icon-camera {
+          color: $icon-blue;
+          display: none;
+          @include mq("tablet") {
+            display: block;
+          }
+        }
+        .icon + .icon {
+          margin-left: $gutter20;
+        }
+        .seperator {
+          border-right: 0;
+          height: calc(100% - 30px);
+          margin-left: 0;
+          @include mq("tablet") {
+            border-right: 1px solid $border-color;
+            margin-left: $gutter20;
+          }
+        }
+        .seperator + .icon {
+          margin-left: $gutter20;
+        }
+      }
+
+      .post {
+        margin-top: $gutter20;
+        padding: $gutter20 $gutter20 $gutter20 $gutter20;
+        background-color: $background-white;
+        border: 1px solid $border-color;
+        border-radius: $border-radius;
+        box-shadow: 0px 3px 1px rgba(210, 210, 210, 0.5);
+        @include mq("tablet") {
+          margin-top: $gutter30;
+          padding: $gutter30 $gutter30 $gutter30 $gutter30;
+        }
+        &-profile-area {
+          display: flex;
+          align-items: center;
+          img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+          }
+          .title {
+            display: flex;
+            flex-direction: column;
+            margin-left: $gutter20;
+            line-height: $line-height;
+          }
+          h3 {
+            font-size: $font-size-large;
+            color: $color-black;
+            font-weight: 600;
+          }
+          p {
+            font-size: $font-size-small;
+            color: $color-gray;
+          }
+          .icon {
+            margin-left: auto;
+            color: $icon-gray;
+            width: 1.3em;
+            height: 1.3em;
+          }
+        }
+        &-text {
+          margin-top: $gutter20;
+          p {
+            font-size: $font-size-small;
+            color: $color-black;
+            line-height: $line-height;
+            @include mq("tablet") {
+              font-size: $font-size;
+            }
+          }
+          .photo {
+            display: flex;
+            flex-wrap: wrap;
+            display: inline-block;
+            width: 100%;
+            margin-top: $gutter20;
+            a img {
+              object-fit: cover;
+              object-position: 50% 50%;
+              margin-bottom: 5px;
+              margin-right: 0;
+              border-radius: $border-radius;
+            }
+          }
+
+          #special1 {
+            a img {
+              width: calc(50% - 5px);
+              height: 200px;
+              @include mq("tablet") {
+                width: calc(50% - 5px);
+                height: 300px;
+              }
+              @include mq("desktop") {
+                width: calc(33.3% - 5px);
+                height: 400px;
+              }
+            }
+            a:nth-child(5) {
+              img {
+                width: calc(100% - 5px);
+                @include mq("tablet") {
+                  width: calc(100% - 5px);
+                }
+                @include mq("desktop") {
+                  width: calc(33% - 0px);
+                }
+              }
+            }
+          }
+          #special2 {
+            a img {
+              width: calc(50% - 5px);
+              height: 300px;
+              @include mq("desktop") {
+                width: calc(33.3% - 5px);
+                height: 300px;
+              }
+            }
+            a:nth-child(7) {
+              img {
+                width: calc(50% - 5px);
+                height: 300px;
+                object-position: 50% 65%;
+                @include mq("desktop") {
+                  width: calc(100% - 5px);
+                  height: 300px;
+                }
+              }
+            }
+          }
+          #special3 {
+            img {
+              width: calc(50% - 5px);
+              height: 200px;
+              @include mq("desktop") {
+                width: calc(33.3% - 5px);
+                height: 300px;
+              }
+            }
+            a:nth-child(7) {
+              img {
+                width: calc(50% - 5px);
+                height: 200px;
+                object-position: 50% 70%;
+                @include mq("desktop") {
+                  width: calc(50% - 5px);
+                  height: 300px;
+                }
+              }
+            }
+            a:nth-child(9) {
+              img {
+                width: calc(100% - 5px);
+                height: 300px;
+                object-position: 50% 70%;
+                @include mq("desktop") {
+                  width: calc(50% - 5px);
+                  height: 300px;
+                }
+              }
+            }
+          }
+        }
+        &-comments {
+          display: flex;
+          align-items: center;
+          margin-top: $gutter10;
+          .item {
+            display: flex;
+            align-items: center;
+            width: 60px;
+            @include mq("tablet") {
+              width: 80px;
+            }
+            .icon {
+              color: $icon-gray;
+              width: 1em;
+              height: 1em;
+              @include mq("tablet") {
+                width: 1.3em;
+                height: 1.3em;
+              }
+            }
+            .count {
+              color: $color-gray;
+              margin-left: 5px;
+              font-size: $font-size-small;
+              font-weight: 500;
+              @include mq("tablet") {
+                font-size: $font-size;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .sidebar {
+      flex: 1 100px;
+      height: fit-content;
+      margin-top: $gutter30;
+      margin-left: $gutter30;
+      padding: $gutter20;
+      border-radius: $border-radius;
+      background-color: $background-white;
+      border: 1px solid $border-color;
+      @include mq("tablet") {
+        padding: $gutter30;
+      }
+
+      .story {
+        p {
+          color: $color-black;
+          font-size: $font-size-large;
+          font-weight: 600;
+        }
+        .item {
+          display: flex;
+          margin-top: $gutter20;
+          .photo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 60px;
+            height: 60px;
+            border: 2px solid $color-blue;
+            padding: 5px;
+            border-radius: 50%;
+            img {
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+            }
+          }
+        }
+        .photo + .photo {
+          margin-left: $gutter10;
+        }
+        .special {
+          background-color: $color-blue;
+          color: white;
+          font-size: 28px;
+        }
+      }
+      .events {
+        margin-top: $gutter30;
+        p {
+          color: $color-black;
+          font-size: $font-size-large;
+          font-weight: 600;
+        }
+        img {
+          margin-top: $gutter20;
+          width: 100%;
+        }
+        .title {
+          margin-top: $gutter20;
+          font-size: $font-size;
+          font-weight: 500;
+          color: $color-black;
+        }
+        .date {
+          margin-top: 5px;
+          font-size: 14px;
+          color: $color-light-gray;
+        }
+      }
+      .friends {
+        margin-top: $gutter30;
+        p {
+          color: $color-black;
+          font-size: $font-size-large;
+          font-weight: 600;
+        }
+
+        .list {
+          display: flex;
+          flex-direction: column;
+          .item {
+            margin-top: $gutter20;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .title {
+              display: flex;
+              flex-direction: column;
+              margin-left: $gutter20;
+              .name {
+                font-size: $font-size;
+                color: $color-black;
+                font-weight: 600;
+                line-height: $line-height;
+              }
+              .job {
+                font-size: $font-size-small;
+                color: $color-light-gray;
+                font-weight: 500;
+              }
+            }
+            img {
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+            }
+            .icons {
+              margin-left: auto;
+              .icon {
+                color: $icon-gray;
+              }
+              .icon + .icon {
+                margin-left: $gutter10;
+              }
+            }
+          }
+        }
+        .list + p {
+          margin-top: $gutter30;
+        }
+      }
+    }
+  }
+}
+
+.lightbox {
+  /** Default lightbox to hidden */
+  display: none;
+
+  /** Position and style */
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+}
+.lightbox-special {
+  width: auto !important;
+  height: auto !important;
+}
+.lightbox img {
+  max-width: 90% !important;
+  max-height: 80% !important;
+}
+
+.lightbox:target {
+  /** Remove default browser outline */
+  outline: none;
+  /** Unhide lightbox **/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

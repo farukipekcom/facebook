@@ -1,0 +1,186 @@
+.Header {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  z-index: 9;
+  background-color: #fff;
+  position: relative;
+  border-bottom: 1px solid $border-color;
+  @include mq("large") {
+    display: block;
+    flex: 1 40px;
+    align-items: center;
+    height: 100vh;
+    max-width: 300px;
+    background-color: $background-gray1;
+    font-family: $font-family1;
+    font-size: $font-size-menu;
+    color: $color-black;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    border: 0px;
+    z-index: 9;
+  }
+  .icon-menu {
+    color: $icon-blue;
+    width: 1.5em;
+    height: 1.5em;
+  }
+  .container {
+    display: flex;
+    width: 100%;
+    @include mq("large") {
+      display: flex;
+      flex-direction: column;
+      padding-top: $gutter40;
+      padding-left: $gutter40;
+      padding-right: $gutter30;
+    }
+  }
+  img {
+    height: 35px;
+  }
+  h3 {
+    display: none;
+    @include mq("large") {
+      display: flex;
+      font-weight: 700;
+      color: $color-black;
+    }
+  }
+  &-switch {
+    position: relative;
+    left: 10px;
+    background-color: #fff;
+    margin-left: auto;
+    cursor: pointer;
+    @include mq("large") {
+      display: none;
+    }
+  }
+  .menu-shortcut {
+    display: none;
+    @include mq("tablet") {
+      display: none;
+    }
+    @include mq("large") {
+      display: block;
+    }
+  }
+  &-menu {
+    margin-top: 50px;
+    background-color: #ffffff;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    pointer-events: none;
+    opacity: 0;
+    position: fixed;
+    flex-direction: column;
+    left: 0px;
+    right: 0px;
+    top: 30px;
+    padding: 20px;
+    @include mq("large") {
+      flex-direction: row;
+      box-shadow: none;
+      padding: 0;
+      margin-top: $gutter50;
+      pointer-events: auto;
+      transform: translateY(0);
+      transition: 0s;
+      opacity: 1;
+      flex-direction: row;
+      position: static;
+      box-shadow: none;
+      background-color: transparent;
+      padding: 0;
+    }
+    .Header.menu-show & {
+      opacity: 1;
+      transform: translateX(0);
+      pointer-events: auto;
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      @include mq("large") {
+        margin-top: $gutter30;
+      }
+      .icon {
+        width: 1.3em;
+        height: 1.3em;
+        color: $icon-blue;
+        @include mq("large") {
+          width: 1em;
+          height: 1em;
+          color: black;
+        }
+      }
+
+      .icon-right {
+        display: none;
+        @include mq("large") {
+          display: block;
+          margin-left: auto;
+        }
+      }
+      a {
+        margin-left: 15px;
+        font-size: $font-size;
+        font-weight: 400;
+        @include mq("large") {
+          font-weight: 500;
+        }
+      }
+      .active {
+        font-weight: bold;
+      }
+      .notification {
+        display: none;
+        @include mq("large") {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 25px;
+          height: 25px;
+          background-color: $background-blue;
+          color: white;
+          margin-left: auto;
+          border-radius: 50%;
+          box-shadow: 0px 3px 10px rgba(60, 90, 153, 0.5);
+        }
+      }
+      + .Header-menu-item {
+        margin-top: $gutter20;
+        @include mq("large") {
+          margin-top: $gutter30;
+        }
+      }
+    }
+  }
+  &-shortcuts {
+    margin-top: $gutter50;
+    &-item {
+      display: flex;
+      margin-top: 30px;
+      a {
+        margin-left: 15px;
+        font-size: $font-size;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.menu-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.not-active {
+  opacity: 0.3;
+}

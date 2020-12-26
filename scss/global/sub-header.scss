@@ -1,0 +1,409 @@
+.Sub-Header {
+  font-family: $font-family2;
+  background: rgba($background-blue, 0.95);
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  bottom: 0;
+  z-index: 10;
+  @include mq("tablet") {
+    font-family: $font-family2;
+    background: rgba($background-blue, 0.95);
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    bottom: 0;
+    z-index: 10;
+  }
+  .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .profile {
+    display: none;
+    @include mq("tablet") {
+      display: flex;
+      flex: 1;
+      margin-left: $gutter10;
+    }
+    img {
+      margin-left: $gutter50;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+    }
+    .title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: $gutter30;
+      color: white;
+      width: max-content;
+      .name {
+        font-size: $font-size-large;
+        font-weight: 600;
+      }
+      .description {
+        font-size: $font-size-small;
+        margin-top: 5px;
+        color: $color-white-opacity;
+      }
+    }
+  }
+  .icons {
+    display: flex;
+    flex: 2;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    .icon {
+      width: 1.2em;
+      height: 1.2em;
+      color: $icon-gray;
+      @include mq("tablet") {
+        width: 1.5em;
+        height: 1.5em;
+        color: $icon-gray;
+      }
+    }
+    .icon + .icon {
+      margin-left: $gutter50;
+    }
+    button {
+      margin-right: $gutter50;
+      background-color: transparent;
+      cursor: pointer;
+    }
+    button:focus {
+      outline: 0px;
+    }
+
+    .notification {
+      border-top-left-radius: $border-radius;
+      border-top-right-radius: $border-radius;
+      width: 100%;
+      background-color: #2d4373;
+      position: absolute;
+      bottom: 32px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      padding: $gutter20;
+      display: none;
+      @include mq("tablet") {
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+        width: 500px;
+        background-color: #2d4373;
+        position: absolute;
+        bottom: 52px;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        padding: $gutter20;
+        display: none;
+      }
+      p {
+        color: $color-white;
+        font-size: $font-size-large;
+        font-weight: 600;
+        @include mq("tablet") {
+          color: $color-white;
+          font-size: $font-size-large;
+          font-weight: 600;
+        }
+      }
+      .item {
+        display: flex;
+        align-items: center;
+        margin-top: $gutter20;
+        @include mq("tablet") {
+          display: flex;
+          align-items: center;
+          margin-top: $gutter20;
+        }
+        .photo {
+          position: relative;
+          img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            @include mq("tablet") {
+              width: 60px;
+              height: 60px;
+            }
+          }
+          .icon-box {
+            background-color: $background-white;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            bottom: -5px;
+            left: -5px;
+            @include mq("tablet") {
+              background-color: $background-white;
+              width: 25px;
+              height: 25px;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              position: absolute;
+              bottom: -10px;
+              left: -10px;
+            }
+
+            .icon {
+              color: $icon-blue;
+              border-radius: 50%;
+              width: 1em;
+              height: 1em;
+              @include mq("tablet") {
+                color: $icon-blue;
+                border-radius: 50%;
+                width: 1.2em;
+                height: 1.2em;
+              }
+            }
+          }
+        }
+        .details {
+          margin-left: $gutter10;
+          display: flex;
+          flex-direction: column;
+          .description {
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 400;
+            max-height: 40px;
+            overflow: hidden;
+            display: flex;
+
+            @include mq("tablet") {
+              color: white;
+              font-size: $font-size-small;
+              line-height: 20px;
+              font-weight: 400;
+            }
+          }
+          .time {
+            color: $color-white-opacity;
+            font-size: 12px;
+            margin-top: 5px;
+            font-weight: 400;
+            @include mq("tablet") {
+              margin-top: 5px;
+              color: $color-white-opacity;
+              font-size: 12px;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+    .music {
+      border-top-left-radius: $border-radius;
+      border-top-right-radius: $border-radius;
+      background-color: #2d4373;
+      position: absolute;
+      bottom: 32px;
+      left: 70px;
+      padding-left: $gutter20;
+      padding-right: $gutter20;
+      padding-top: $gutter20;
+      padding-bottom: 0;
+      display: none;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      @include mq("tablet") {
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+        background-color: #2d4373;
+        position: absolute;
+        bottom: 52px;
+        left: 70px;
+        padding: $gutter20;
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        width: max-content;
+      }
+      .full {
+        display: block;
+      }
+      p {
+        color: $color-white;
+        font-size: $font-size-large;
+        font-weight: 600;
+        @include mq("tablet") {
+          color: $color-white;
+          font-size: $font-size-large;
+          font-weight: 600;
+        }
+      }
+      .menu {
+        display: flex;
+        align-items: center;
+        margin-top: $gutter10;
+        overflow: hidden;
+        @include mq("tablet") {
+          margin-top: $gutter20;
+        }
+        p {
+          color: White;
+          font-size: $font-size-small;
+          font-weight: 400;
+          @include mq("tablet") {
+            color: White;
+            font-size: $font-size;
+            font-weight: 400;
+            width: 100%;
+          }
+        }
+        p + p {
+          margin-left: $gutter20;
+        }
+        .active-menu {
+          background-color: #fff;
+          color: black;
+          font-weight: 500;
+          border-radius: 20px;
+          padding: 5px 10px 5px 10px;
+        }
+        .owl-stage-outer {
+          width: 500px;
+          min-width: 500px;
+          display: flex;
+        }
+        .owl-item {
+          padding-right: 0px;
+          @include mq("tablet") {
+            padding-right: 20px;
+            margin-right: 0px !important;
+          }
+        }
+      }
+      .owl-item + .owl-item {
+        margin-left: 0px;
+        @include mq("tablet") {
+          margin-left: 0px;
+        }
+      }
+      input {
+        margin-top: $gutter10;
+        width: 100%;
+        padding: $gutter10 $gutter10 $gutter10 $gutter10;
+        border: 1px solid $border-color;
+        font-size: 12px;
+        border-radius: 25px;
+        color: #d3d8e0;
+        background-color: transparent;
+        @include mq("tablet") {
+          margin-top: $gutter20;
+          font-size: $font-size-small;
+        }
+      }
+      input::placeholder {
+        color: #d3d8e0;
+      }
+      input:focus {
+        outline: 0;
+      }
+      .list {
+        color: white;
+        margin-top: $gutter10;
+        @include mq("tablet") {
+          margin-top: $gutter20;
+        }
+        .active {
+          background-color: rgb(36, 56, 100);
+        }
+        .item {
+          display: flex;
+          align-items: center;
+          padding: $gutter10;
+          border-radius: $border-radius;
+          img {
+            width: 40px;
+            height: 40px;
+            border-radius: $border-radius;
+            @include mq("tablet") {
+              width: 60px;
+              height: 60px;
+              border-radius: $border-radius;
+            }
+          }
+          .title {
+            margin-left: $gutter10;
+            @include mq("tablet") {
+              margin-left: $gutter20;
+            }
+          }
+          .name {
+            font-size: $font-size-small;
+            line-height: 24px;
+            font-weight: 400;
+            @include mq("tablet") {
+              font-size: $font-size;
+              line-height: $line-height;
+              font-weight: 500;
+            }
+          }
+          .artist {
+            font-size: 12px;
+            color: $color-white-opacity;
+            font-weight: 400;
+            @include mq("tablet") {
+              font-size: $font-size-small;
+              color: $color-white-opacity;
+              font-weight: 400;
+            }
+          }
+          .time {
+            margin-left: auto;
+            font-size: 14px;
+            @include mq("tablet") {
+              margin-left: auto;
+              font-size: $font-size;
+            }
+          }
+
+          .icon {
+            width: 1em;
+            height: 1em;
+            margin-left: $gutter20;
+            @include mq("tablet") {
+              margin-left: $gutter20;
+              width: 1.3em;
+              height: 1.3em;
+            }
+          }
+        }
+      }
+    }
+  }
+  &-right {
+    display: none;
+    @include mq("tablet") {
+      display: flex;
+      flex: 1;
+      margin-right: $gutter10;
+    }
+  }
+}
